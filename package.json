@@ -1,0 +1,17 @@
+{
+  "name": "desafio5-web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "percy exec -- jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@percy/cli": "^1.29.2",
+    "@percy/puppeteer": "^2.0.2",
+    "puppeteer": "^23.1.1"
+  }
+}
