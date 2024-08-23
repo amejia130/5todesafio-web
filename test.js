@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-const { PercySnapshot } = require('@percy/jest');
+const percySnapshot = require('@percy/puppeteer');
 
 describe('Visual Regression Tests', () => {
   let browser;
@@ -15,8 +15,7 @@ describe('Visual Regression Tests', () => {
   });
 
   test('Homepage should match the snapshot', async () => {
-    await page.goto('https://amazon.com');
-    const screenshot = await page.screenshot();
-    PercySnapshot('Homepage');
+    await page.goto('https://example.com');
+    await percySnapshot(page, 'Homepage');
   });
 });
